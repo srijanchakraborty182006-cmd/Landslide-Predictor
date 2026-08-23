@@ -9,7 +9,7 @@ CORS(app)
 scaler = joblib.load('scaler.pkl')
 model = joblib.load('landslide_model.pkl')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     try:
         data = request.get_json()
