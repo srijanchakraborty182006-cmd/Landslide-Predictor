@@ -10,7 +10,7 @@ document.getElementById('landslide').addEventListener('submit', async function(e
     
     try
     {
-        const response = await fetch('https://landslide-predictor-1-rge0.onrender.com/', {
+        const response = await fetch('https://landslide-predictor-1-rge0.onrender.com', {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({features: input})
