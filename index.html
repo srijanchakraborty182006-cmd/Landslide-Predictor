@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landslide Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading ly">
+        <h1>Landslide Predictor</h1>
+        <h2>(Especially made for North Eastern India)</h2>
+    </div>
+    <div class="content">
+    <form id="landslide">
+        <div class="cell">
+            <label for="temp">Temperature:</label>
+            <input type="number"autofocus placeholder="celcius" id="temp" required>
+        </div>
+        <div class="cell">
+            <label for="humid">Humidity</label>
+            <input type="number" placeholder="percentage" id="humid" required>
+        </div>
+        <div class="cell">
+            <label for="percip">Precipitation</label>
+            <input type="number" placeholder="mili-meter" id="percip" required>
+        </div>
+        <div class="cell">
+            <label for="moist">Soil Moisture:</label>
+            <input type="number" placeholder="Percentage" id="moist" required>
+        </div>
+        <div class="cell">
+            <label for="elev">Elevation:</label>
+            <input type="number" placeholder="Meter" id="elev" required>
+        </div>
+        <div class="cell">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <div id="result">
+        <h1 id="score"></h1>
+        <button onclick="location.reload()" type="submit" id="btn">Calculate Again!</button>
+    </div>
+    </div>
+    <div class="ly cell", id="foot">
+        <p>www.landslidepredictor.com copyright &copy; 2026</p>
+    </div>
+    <script src="engine.js"></script>
+</body>
+</html>
