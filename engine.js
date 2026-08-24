@@ -103,7 +103,7 @@ document.getElementById('sub').addEventListener('click', async function predict(
         {
             let risk = data.risk_percentage;
             let result_element = document.getElementById('score');
-            result_element.innerText = `Predicted landslide risk is ${risk} %`;
+            result_element.innerText = `Predicted landslide risk: ${risk} %`;
             result_element.style.color = risk > 50 ? 'red' : 'green';
             document.getElementById('landslide').style.display = "none";
             document.getElementById('check').style.display = "none";
