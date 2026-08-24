@@ -4,47 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landslide Predictor</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="heading ly">
-        <h1>Landslide Predictor</h1>
-        <h3>(For North Eastern India)</h3>
+    <div class="container">
+        <div class="header">
+            <h1>Landslide Predictor</h1>
+            <h3>For North-Eastern India</h3>
+        </div>
+        <div class="body">
+            <p>Search Name of place here:</p>
+            <div class="search-button">
+                <label for="place"></label>
+                <input type="text" placeholder="Darjeeling" id="search-inp">
+                <button type="submit" class="btn" id="search">Search</button>
+            </div>
+            <h3>Select a location on map</h3>
+            <div id="map"></div>
+            <div class="parameters">
+                <div>
+                    <input type="checkbox" id="check">
+                    <label for="option" id="disp">I want to calculate manually!</label>
+                </div>
+                <form id="landslide">
+                <div class="metric">
+                    <label for="temp">Temperature (Celcius):</label>
+                    <input type="number" id="temp" placeholder="35 C" disabled>
+                </div>
+                <div class="metric">
+                    <label for="humid">Humidity (in %):</label>
+                    <input type="number" id="humid" placeholder="40%" disabled>
+                </div>
+                <div class="metric">
+                    <label for="precip">Precipitation (in mm)</label>
+                    <input type="number" id="precip" placeholder="50 mm" disabled>
+                </div>
+                <div class="metric">
+                    <label for="soil">Soil moisture (in %)</label>
+                    <input type="number" id="soil" placeholder="50%" disabled>
+                </div>
+                <div class="metric">
+                    <label for="elev">Elevation (in m):</label>
+                    <input type="number" id="elev" placeholder="400 m" disabled>
+                </div>
+                <div class="metric">
+                    <button type="submit" id="sub">Predict!</button>
+                </div>
+                </form>
+                <div class="hidden" id="status-box">
+                    <h2 id="score"></h2>
+                    <br>
+                    <button onclick="location.reload()" type="submit" id="btn">Predict Again!</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="content">
-    <form id="landslide">
-        <div class="cell">
-            <label for="temp">Temperature:</label>
-            <input type="number"autofocus placeholder="celcius" id="temp" required>
-        </div>
-        <div class="cell">
-            <label for="humid">Humidity</label>
-            <input type="number" placeholder="percentage" id="humid" required>
-        </div>
-        <div class="cell">
-            <label for="percip">Precipitation</label>
-            <input type="number" placeholder="mili-meter" id="percip" required>
-        </div>
-        <div class="cell">
-            <label for="moist">Soil Moisture:</label>
-            <input type="number" placeholder="Percentage" id="moist" required>
-        </div>
-        <div class="cell">
-            <label for="elev">Elevation:</label>
-            <input type="number" placeholder="Meter" id="elev" required>
-        </div>
-        <div class="cell">
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-    <div id="result">
-        <h1 id="score"></h1>
-        <button onclick="location.reload()" type="submit" id="btn">Calculate Again!</button>
-    </div>
-    </div>
-    <div class="ly cell", id="foot">
-        <p>copyright &copy; 2026</p>
-    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="engine.js"></script>
 </body>
 </html>
