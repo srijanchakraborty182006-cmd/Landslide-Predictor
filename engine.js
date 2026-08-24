@@ -93,7 +93,7 @@ document.getElementById('sub').addEventListener('click', async function predict(
     let input = [temperature, humidity, precipitation, moisture, elevation];
     try
     {
-        const response = await fetch('http://127.0.0.1:5000/', {
+        const response = await fetch('https://landslide-predictor-2.onrender.com/', {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({features: input})
