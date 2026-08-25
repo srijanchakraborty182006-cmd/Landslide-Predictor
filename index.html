@@ -17,7 +17,7 @@
             <p>Search Name of place here:</p>
             <div class="search-button">
                 <label for="place"></label>
-                <input type="text" placeholder="Darjeeling" id="search-inp">
+                <input type="text" placeholder="Eg: Kolkata" id="search-inp">
                 <button type="submit" class="btn" id="search">Search</button>
             </div>
             <h3>Select a location on map</h3>
@@ -30,23 +30,23 @@
                 <form id="landslide">
                 <div class="metric">
                     <label for="temp">Temperature (Celcius):</label>
-                    <input type="number" id="temp" placeholder="35 C" disabled>
+                    <input type="number" id="temp" placeholder="35 C" required disabled>
                 </div>
                 <div class="metric">
                     <label for="humid">Humidity (in %):</label>
-                    <input type="number" id="humid" placeholder="40%" disabled>
+                    <input type="number" id="humid" placeholder="40%" required disabled>
                 </div>
                 <div class="metric">
                     <label for="precip">Precipitation (in mm)</label>
-                    <input type="number" id="precip" placeholder="50 mm" disabled>
+                    <input type="number" id="precip" placeholder="50 mm" required disabled>
                 </div>
                 <div class="metric">
                     <label for="soil">Soil moisture (in %)</label>
-                    <input type="number" id="soil" placeholder="50%" disabled>
+                    <input type="number" id="soil" placeholder="50%" required disabled>
                 </div>
                 <div class="metric">
                     <label for="elev">Elevation (in m):</label>
-                    <input type="number" id="elev" placeholder="400 m" disabled>
+                    <input type="number" id="elev" placeholder="400 m" required disabled>
                 </div>
                 <div class="metric">
                     <button type="submit" id="sub">Predict!</button>
